@@ -4296,8 +4296,7 @@ section img,
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(115deg, rgba(15, 15, 25, 0.96) 0%, rgba(15, 15, 25, 0.94) 40%, rgba(15, 15, 25, 0.75) 60%, rgba(15, 15, 25, 0.4) 100%),
-    url('../img/liliane.webp') no-repeat right center / cover;
+    linear-gradient(115deg, rgba(15, 15, 25, 0.96) 0%, rgba(15, 15, 25, 0.94) 40%, rgba(15, 15, 25, 0.8) 70%, rgba(15, 15, 25, 0.6) 100%);
   z-index: 1;
 }
 
@@ -4310,9 +4309,10 @@ section img,
 /* Enhanced Founder Section - New Layout */
 .founder-section-enhanced {
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
   margin-top: 40px;
-  align-items: flex-start;
 }
 
 .founder-image-container {
@@ -4321,8 +4321,8 @@ section img,
 }
 
 .founder-image-wrapper {
-  width: 260px;
-  height: 260px;
+  width: 300px;
+  height: 300px;
   border-radius: 999px;
   overflow: hidden;
   border: 0;
@@ -4393,6 +4393,7 @@ section img,
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .founder-quote {
