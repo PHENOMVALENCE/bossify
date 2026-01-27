@@ -1536,12 +1536,12 @@ section img,
   .founder-section-enhanced {
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 28px;
   }
 
   .founder-image-wrapper {
-    width: 220px;
-    height: 220px;
+    width: 260px;
+    height: 260px;
   }
 
   .founder-quote-container {
@@ -5268,13 +5268,13 @@ section img,
   .founder-section-enhanced {
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 28px;
     margin-top: 30px;
   }
 
   .founder-image-wrapper {
-    width: 220px;
-    height: 220px;
+    width: 260px;
+    height: 260px;
   }
 
   .founder-quote-container {
