@@ -107,16 +107,43 @@
                     loading.classList.remove('d-block');
                     
                     if (data.success) {
-                        sentMessage.textContent = data.message || 'Your enrollment application has been submitted successfully! We will contact you soon.';
+                        // Update success message
+                        const successText = data.message || 'Your enrollment application has been submitted successfully! We will contact you within 24 hours.';
+                        sentMessage.innerHTML = `<span>${successText}</span>`;
                         sentMessage.classList.add('d-block');
+                        
+                        // Hide form fields smoothly
+                        const formFields = enrollmentForm.querySelectorAll('.row, button[type="submit"], .text-muted');
+                        formFields.forEach(field => {
+                            field.style.transition = 'opacity 0.3s ease';
+                            field.style.opacity = '0';
+                            setTimeout(() => {
+                                field.style.display = 'none';
+                            }, 300);
+                        });
+                        
+                        // Reset form (hidden)
                         enrollmentForm.reset();
                         courseTrackWrapper.style.display = 'none';
                         
-                        // Close modal after 3 seconds
+                        // Scroll to success message
+                        setTimeout(() => {
+                            sentMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }, 100);
+                        
+                        // Close modal after 4 seconds
                         setTimeout(() => {
                             enrollmentModal.hide();
-                            sentMessage.classList.remove('d-block');
-                        }, 3000);
+                            // Reset form display after modal closes
+                            setTimeout(() => {
+                                formFields.forEach(field => {
+                                    field.style.display = '';
+                                    field.style.opacity = '1';
+                                });
+                                sentMessage.classList.remove('d-block');
+                                sentMessage.innerHTML = 'Your enrollment application has been submitted successfully! We will contact you within 24 hours.';
+                            }, 300);
+                        }, 4000);
                     } else {
                         // Handle validation errors
                         let errorText = data.message || 'An error occurred. Please try again.';

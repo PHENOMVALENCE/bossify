@@ -84,49 +84,66 @@
 
       <div class="container position-relative">
 
-        <div class="row gy-5">
+        <div class="row gy-5 align-items-center">
 
-          <div class="content col-xl-6 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
-            <h3>About Bossify Academy</h3>
-            <p>
-              Bossify Academy is a Tanzanian-originated leadership and professional development institution designed for ambitious women who are prepared to lead, build, and excel.
-            </p>
-            <p>
-              Whether you are engaged in corporate, business, or public service, our Academy provides you with essential tools, expert mentorship, and a supportive sisterhood to flourish.
-            </p>
-            <div class="founder-section mt-4" data-aos="fade-up" data-aos-delay="200">
-              <div class="founder-image-wrapper">
-                <img src="assets/img/liliane.webp" alt="Liliane Masuka, Founder of Bossify Academy" class="founder-image">
+          <!-- Left Column: Content & Founder -->
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-content-wrapper">
+              <h3>About Bossify Academy</h3>
+              <p>
+                Bossify Academy is a Tanzanian-originated leadership and professional development institution designed for ambitious women who are prepared to lead, build, and excel.
+              </p>
+              <p>
+                Whether you are engaged in corporate, business, or public service, our Academy provides you with essential tools, expert mentorship, and a supportive sisterhood to flourish.
+              </p>
+            </div>
+
+            <!-- Founder Section: Image and Quote Side by Side -->
+            <div class="founder-section-enhanced" data-aos="fade-up" data-aos-delay="200">
+              <div class="founder-image-container">
+                <div class="founder-image-wrapper">
+                  <img src="assets/img/liliane.webp" alt="Liliane Masuka, Founder of Bossify Academy" class="founder-image">
+                  <div class="founder-badge-overlay">
+                    <i class="bi bi-award-fill"></i>
+                    <span>Founder & Visionary</span>
+                  </div>
+                </div>
               </div>
-              <blockquote class="founder-quote">
-                <p>"This is not a classroom. It's a confidence room."</p>
-                <cite>– Liliane Masuka, Founder</cite>
-              </blockquote>
+              <div class="founder-quote-container">
+                <blockquote class="founder-quote">
+                  <div class="quote-icon">
+                    <i class="bi bi-quote"></i>
+                  </div>
+                  <p>"This is not a classroom. It's a confidence room."</p>
+                  <cite>– Liliane Masuka, Founder</cite>
+                </blockquote>
+              </div>
             </div>
           </div>
 
-          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="200">
+          <!-- Right Column: Icon Boxes -->
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="200">
             <div class="row gy-4">
 
-              <div class="col-md-6 icon-box position-relative">
+              <div class="col-12 icon-box position-relative">
                 <i class="bi bi-people"></i>
                 <h4><a href="" class="stretched-link">For Corporate Professionals</a></h4>
                 <p>Mid-level executives (25–40) aiming for senior roles and leadership positions</p>
               </div><!-- Icon-Box -->
 
-              <div class="col-md-6 icon-box position-relative">
+              <div class="col-12 icon-box position-relative">
                 <i class="bi bi-briefcase"></i>
                 <h4><a href="" class="stretched-link">For Businesswomen</a></h4>
                 <p>Entrepreneurs scaling their ventures and building sustainable businesses</p>
               </div><!-- Icon-Box -->
 
-              <div class="col-md-6 icon-box position-relative">
+              <div class="col-12 icon-box position-relative">
                 <i class="bi bi-trophy"></i>
                 <h4><a href="" class="stretched-link">Empowerment Focus</a></h4>
                 <p>If you're a woman tired of being overlooked, underpaid, or unheard — Bossify Academy is your tribe</p>
               </div><!-- Icon-Box -->
 
-              <div class="col-md-6 icon-box position-relative">
+              <div class="col-12 icon-box position-relative">
                 <i class="bi bi-heart"></i>
                 <h4><a href="" class="stretched-link">Sisterhood & Support</a></h4>
                 <p>Join a community of honest, strategic, and supportive women leaders</p>
@@ -810,7 +827,7 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form id="enrollmentForm">
+          <form id="enrollmentForm" novalidate>
             <div class="row gy-3">
               <div class="col-md-6">
                 <label for="first_name" class="form-label">Full Name <span class="text-danger">*</span></label>
@@ -852,11 +869,15 @@
               </div>
             </div>
             <div class="text-center mt-4">
-              <div class="loading">Loading</div>
+              <div class="loading">Submitting your application...</div>
               <div class="error-message"></div>
-              <div class="sent-message">Your enrollment application has been submitted successfully! We will contact you soon.</div>
-              <button type="submit" class="btn btn-primary btn-lg px-5">Submit Application</button>
-              <p class="text-muted small mt-3 mb-0">We'll contact you within 24 hours to discuss next steps</p>
+              <div class="sent-message">Your enrollment application has been submitted successfully! We will contact you within 24 hours.</div>
+              <button type="submit" class="btn btn-primary btn-lg px-5">
+                <i class="bi bi-send-fill me-2"></i>Submit Application
+              </button>
+              <p class="text-muted small mt-3 mb-0">
+                <i class="bi bi-clock me-1"></i>We'll contact you within 24 hours to discuss next steps
+              </p>
             </div>
           </form>
         </div>
